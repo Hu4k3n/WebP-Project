@@ -1,12 +1,12 @@
 @keyframes fade-in {
     from {
         opacity: 0;
-        margin-top: 0em;
+        top: 0em;
     }
     
     to {
         opacity: 1;
-        margin-top: 5em;
+        top: 5em;
     }
 }
 
@@ -17,7 +17,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5em;
+    top: 5em;
+    position: relative;
     
     /* background-size: cover; */
     animation: fade-in 1s; 
