@@ -1,31 +1,27 @@
+@import url("index.css");
 @keyframes fade-in {
-    from {
+    0% {
         opacity: 0;
-        top: 0em;
+        top: -4em;
     }
-    
-    to {
+    100%{
         opacity: 1;
-        top: 5em;
+        top: -2em;
     }
 }
 
+
 .main {
     width: 100%;
-    height: fit-content;
+    height: 145vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 5em;
+    top: -2em;
     /* background-size: cover; */
     animation: fade-in 1s; 
-}
-
-* {
-    box-sizing: border-box;
-    font-family: sans-serif;
 }
 
 body {
@@ -38,42 +34,13 @@ body {
 h1 {
     margin-top: 1em;
     margin-bottom: 0.3em;
-}
-
-nav {
-    display: flex;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    flex-direction: row;
-    width: 100%;
-    height: auto;
-    color: white;
-    background: #0f0f0f;
-    padding: 20px 50px;
-    font-size: 26px;
-}
-
-nav a {
-    padding: 5px 20px;
-    text-decoration: none;
-    color: white;
-}
-
-nav a.active {
-    color: crimson;
-    border-bottom: 5px solid crimson;
+    color: #0f0f0f;
 }
 
 .row {
     display: flex;
     flex-direction: row;
     flex-grow: 100;
-}
-
-.row.center {
-    justify-content: center;
 }
 
 .card {
