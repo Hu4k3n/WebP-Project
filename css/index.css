@@ -95,8 +95,8 @@ nav a {
 }
 
 nav a.active {
-    color: cornflowerblue;
-    border-bottom: 5px solid cornflowerblue;
+    color: crimson;
+    border-bottom: 5px solid crimson;
 }
 
 .row {
