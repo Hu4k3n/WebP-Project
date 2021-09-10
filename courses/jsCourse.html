@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/index.css" />
+        <link rel="stylesheet" href="../css/coursePage.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <title>Js-CoursePage</title>
+    </head>
+    <body>
+        <nav>
+            <i
+                class="fa fa-angle-left"
+                style="font-size: 50px; cursor: pointer;"
+                onclick="window.location.href = '../pages/courses.html';"
+            ></i>
+            <div class="row center">
+                <a href="../index.html">Home</a>
+                <a href="../pages/courses.html" class="active" href="#">Courses</a>
+                <a href="../pages/teachers.html">Mentors</a>
+            </div>
+        </nav>
+        <div class="htmlbg">
+            <div class="htmllanding">
+                <div class="flex-container">
+                    <div>
+                        <h1>Js</h1>
+                    </div>
+                </div>
+                <p>
+                    Javascript is a scripting language that allows you to
+                    create dynamic webpages. 
+                </p>
+            </div>
+        </div>
+        
+        <div class="course">
+            <div class="module">
+                <hr class="section" />
+                <h1>References</h1>
+                <hr class="moduleHeading" />
+                <br />
+                <div class="moduleContents">
+                  <input type="checkbox" id="reference1" name="reference1 value="books">
+                  <label for="references1"> The Js Basics Vol 1</label><br />
+                  <input type="checkbox" id="reference1" name="reference1 value="books">
+                  <label for="references1"> The Js Basics Vol 2</label><br />
+                  <input type="checkbox" id="reference1" name="reference1 value="books">
+                  <label for="references1"> The Js Basics Vol 3</label><br /><br />
+                </div>
+              </div>
+            <select id="filter">
+                <option value="all">None</option>
+                <option value="short">Short</option>
+                <option value="medium">Medium</option>
+                <option value="long">Long</option>
+            </select>
+            <div id="course"></div>
+        </div>
+        <script type="text/javascript" src="../js/jsCourse.js"></script>
+        <script type="text/javascript" src="../js/rendercourse.js"></script>
+    </body>
+</html>
