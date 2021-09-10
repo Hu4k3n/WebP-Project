@@ -11,24 +11,24 @@
 </head>
 
 <body>
-    
     <!-- Navbar -->
     <nav>
         <div class="row center">
             <a href="../index.html">Home</a>
             <a style="cursor: pointer;" onclick="window.scrollBy(0,1000)">About</a>
             <a class="active" href="#">Courses</a>
-            <a href="#">Teachers</a>
+            <a href="teachers.html">Mentors</a>
             <a style="cursor: pointer;" onclick="window.scrollBy(0,1000)">Contact</a>
         </div>
     </nav>
     <div class="main">
         <h1>Our Courses</h1>
         <!-- First Row -->
-        <div class="row center">
+        <div class="row center" style="flex-grow: 0;">
             <div class="card" onclick="window.location.href = '../index.html';">
-                <img src="../images/html.jpg">
-                <div class="image-spacer"></div>
+                <div class="card-image">
+                    <img src="../images/html.jpg" alt="">
+                </div>
                 <div class="card-text">
                     <h2>HTML</h2>
                     <p>HTML is the language behind every website on the Internet! It's a markup language used to define the structure and content of web pages. It's the first language you need to learn if you want to become a web developer.</p>
@@ -42,11 +42,13 @@
                         <div class="value">12</div>
                         <div class="type">Modules</div>
                     </div>
-                </div> 
+                </div>
+                
             </div>
             <div class="card" onclick="window.location.href = '../index.html';">
-                <img src="../images/css.jpg">
-                <div class="image-spacer"></div>
+                <div class="card-image">
+                    <img src="../images/css.jpg" alt="">
+                </div>
                 <div class="card-text">
                     <h2>CSS</h2>
                     <p>Cascading Style Sheets (CSS) are the main coding files used to lay out a website and its design.</p>
@@ -64,8 +66,9 @@
                 
             </div>
             <div class="card" onclick="window.location.href = '../index.html';">
-                <img src="../images/js.jpg">
-                <div class="image-spacer"></div>
+                <div class="card-image">
+                    <img src="../images/js.jpg" alt="" style="object-fit: 26em;object-position: -6.75em;">
+                </div>
                 <div class="card-text">
                     <h2>JavaScript</h2>
                     <p>JavaScript is among the most powerful and flexible programming languages of the web. It powers the dynamic behavior on most websites, including this one.</p>
@@ -82,11 +85,14 @@
                 </div>
                 
             </div>
+        </div>
 
         <!-- Second Row -->
+        <div class="row center" style="flex-grow: 0;">
             <div class="card" onclick="window.location.href = '../index.html';">
-                <img src="../images/java.png">
-                <div class="image-spacer"></div>
+                <div class="card-image">
+                    <img src="../images/java.png" alt="">
+                </div>
                 <div class="card-text">
                     <h2>Java</h2>
                     <p>Java is very versatile as it is used for programming applications on the web, mobile, desktop, etc. with features such as dynamic coding, multiple security features, platform-independent characteristics, network-centric designing, etc. that make it quite versatile.</p>
@@ -104,8 +110,9 @@
                 
             </div>
             <div class="card" onclick="window.location.href = '../index.html';">
-                <img src="../images/ajax.webp">
-                <div class="image-spacer"></div>
+                <div class="card-image">
+                    <img src="../images/ajax.webp" alt="">
+                </div>
                 <div class="card-text">
                     <h2>AJAX</h2>
                     <p>AJAX stands for Asynchronous JavaScript and XML. AJAX is a new technique for creating better, faster, and more interactive web applications with the help of XML, HTML, CSS, and Java Script.</p>
@@ -123,8 +130,9 @@
                 
             </div>
             <div class="card" onclick="window.location.href = '../index.html';">
-                <img src="../images/python.png">
-                <div class="image-spacer"></div>
+                <div class="card-image">
+                    <img src="../images/python.png" alt="">
+                </div>
                 <div class="card-text">
                     <h2>Python</h2>
                     <p>Python is one of the most loved programming languages by developers, data scientists, software engineers, and even hackers because of its versatility, flexibility, and object-oriented features.</p>
