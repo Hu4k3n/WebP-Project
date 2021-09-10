@@ -13,10 +13,16 @@
     /* background-size: cover; */
 }
 
+.main>*{
+    animation: fade-in 0.5s;
+}
+
 .main h1 {
     position: relative;
     color: white;
     animation: fade-in 0.5s;
+    font-size: xxx-large;
+    margin-top: 0;
 }
 
 .row {
