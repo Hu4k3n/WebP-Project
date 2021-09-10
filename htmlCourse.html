@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/index.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <title>HTML-CoursePage</title>
+    </head>
+    <body>
+        <nav>
+            <i
+                class="fa fa-angle-left"
+                style="font-size: 50px"
+                onclick="window.location.href = '../pages/courses.html';"
+            ></i>
+            <div class="row center">
+                <a href="../index.html">Home</a>
+                <a href="#">About</a>
+                <a href="../pages/courses.html" class="active" href="#"
+                    >Courses</a
+                >
+                <a href="#">Teachers</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+        <div class="htmlbg">
+            <div class="htmllanding">
+                <div class="flex-container">
+                    <div>
+                        <img src="images/html.jpg" alt="" />
+                        <h1>HTML</h1>
+                    </div>
+                </div>
+                <p>
+                    HTML stands for Hyper Text Markup Language. It is the most
+                    basic building block of the Web. It is used to create the
+                    structure of a Web page.
+                </p>
+            </div>
+        </div>
+        <select id="filter">
+            <option value="all">None</option>
+            <option value="short">Short</option>
+            <option value="medium">Medium</option>
+            <option value="long">Long</option>
+        </select>
+        <div id="course"></div>
+
+        <script type="text/javascript" src="js/rendercourse.js"></script>
+    </body>
+</html>
