@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 50px 35%;
     width: 100%;
     height: 100vh;
     color: white;
@@ -13,12 +14,15 @@
 .login h1 {
     color: white;
     font-size: 48px;
+    position: relative;
+    animation: fade-in 0.5s;
 }
 
 .login input {
     display: flex;
     outline: none;
     border: none;
+    width: 100%;
     border-bottom: 1px solid white;
     background: none;
     color: white;
@@ -32,6 +36,21 @@
     border-bottom: 5px solid yellow;
 }
 
+.login input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+}
+
+.login label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.login a {
+    color: white;
+}
+
 .login button {
     position: relative;
     cursor: pointer;
@@ -41,6 +60,7 @@
     margin: 20px;
     background: darkblue;
     color: white;
+    width: 100%;
     transition-duration: 0.2s;
 }
 
