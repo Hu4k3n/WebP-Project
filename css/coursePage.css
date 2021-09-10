@@ -1,0 +1,46 @@
+.course {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: #333;
+    padding: 50px 25%;
+    color: white;
+}
+
+#course {
+    width: 100%;
+}
+
+.course .card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+    margin: 20px;
+    background: #555;
+    color: white;
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
+}
+.course h1 {
+    color: white;
+}
+.course col {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.course iframe {
+    height: 100%;
+    border: none;
+    margin-right: 20px;
+}
+
+.course select {
+    border: 1px solid black;
+    padding: 10px 30px;
+    font-size: 20px;
+}
