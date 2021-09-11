@@ -3,14 +3,26 @@
         opacity: 0;
         top: -20px;
     }
-    
+
     to {
         opacity: 1;
         top: 0;
     }
 }
 
-html{
+@keyframes lateral-wave {
+    from {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(4px, 0px);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -99,11 +111,35 @@ nav {
     font-size: 22px;
 }
 
+nav i {
+    position: fixed;
+    top: 8px;
+    left: 50px;
+    transition-duration: 0.2s;
+}
+
+nav i:hover {
+    color: #777;
+}
+
+/* This animation isn't good
+nav i:hover {
+    animation-name: lateral-wave;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+*/
+
 nav a {
     padding: 5px 20px;
     text-decoration: none;
     color: white;
+    transition-duration: 0.2s;
+}
 
+nav a:hover {
+    background: rgba(255,255,255,0.1);
+    border-bottom: 5px solid grey;
 }
 
 nav a.active {
@@ -154,7 +190,7 @@ footer .container h2 {
     margin-bottom: 15px;
 }
 
-footer .container h2:before{
+footer .container h2:before {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -213,7 +249,7 @@ footer p {
     list-style: none;
 }
 
-.quickLinks ul li a{
+.quickLinks ul li a {
     color: gray;
     text-decoration: none;
     margin-bottom: 10px;
@@ -239,7 +275,7 @@ footer p {
     margin-bottom: 16px;
 }
 
-.contact .info li span:nth-child(1){
+.contact .info li span:nth-child(1) {
     color: white;
     font-size: 20px;
     margin-right: 10px;
@@ -249,12 +285,12 @@ footer p {
     color: gray;
 }
 
-.contact .info li a{
+.contact .info li a {
     color: gray;
     text-decoration: none;
 }
 
-.contact .info li a:hover{
+.contact .info li a:hover {
     color: white;
 }
 
@@ -264,88 +300,4 @@ footer p {
     padding: 8px 100px;
     text-align: center;
     color: white;
-}
-.htmlbg{
-    background-image: url('../images/html-bg.jpg'), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8));
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-.htmllanding {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 22px;
-    padding: 20%;
-    text-align: center;
-    
-}
-
-.htmllanding h1 {
-    position: relative;
-    font-size: 50px;
-    color: white;
-    margin: 10px;
-    animation: fade-in 1s;
-    font-weight: 900;
-}
-.htmllanding p {
-    position: relative;
-    font-size: 25px;
-    color: white;
-    margin: 10px;
-    animation: fade-in 1s;
-    font-weight: 900;
-}
-
-.flex-container i{
-    position: relative;
-    animation: fade-in 1s;
-    
-}
-
-hr.section {
-    border: 10px solid crimson;
-    border-radius: 5px;
-  }
-hr.moduleHeading{
-    border: 2px solid crimson;
-    border-radius: 5px;
-}
-hr.moduleDivision{
-    border: 1px solid crimson;
-    border-radius: 3px;
-}
-.module{
-    /* margin-left: 200px;
-    margin-right: 200px; */
-    color: white;
-    animation: fade-in 1s;
-    font-weight: 500;  
-}
-.module h1{
-    position: relative;
-    font-size: 50px;
-    color: white;
-    margin: 10px;
-    animation: fade-in 1s;
-    font-weight: 700;
-    /* margin-left: 200px; */
-    
-}
-.moduleContents{
-    /* margin-left: 200px; */
-    animation: fade-in 1s;
-    font-weight: 700;
-    font-size: 25px;
-}
-.moduleContents input{
-    width:30px;
-    height:30px;
 }
