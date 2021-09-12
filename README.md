@@ -1,11 +1,11 @@
-<p align="center">
+<p align="left">
   <a href="https://github.com/Hu4k3n/WebP-Project">
     <img src="images/logo.png" alt="Logo" height="80">
   </a>
 
-  <h3 align="center">Web Coursera</h3>
+  <h3 align="left">Web Coursera</h3>
 
-  <p align="center">
+  <p align="left">
     Web coursera is a platform that enables high quality, affordable and flexible learning experiences. Our curated collection of business and technical courses help individuals, companies, governments, and nonprofits go further by placing learning at the center of their strategies. As a global destination for online learning, we strive to connect people through knowledge.
     <br />
     <a href="https://github.com/Hu4k3n/WebP-Project"><strong>Explore the docs »</strong></a>
