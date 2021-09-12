@@ -1,3 +1,6 @@
+[![Contributors][https://img.shields.io/badge/Conitrbutors-3-brightgreen]][https://github.com/Hu4k3n/WebP-Project/graphs/contributors]
+<!-- [![MIT License][https://img.shields.io/badge/license-MIT-orange]][license-url] -->
+
 <br />
 <p align="center">
   <a href="https://github.com/Hu4k3n/WebP-Project">
