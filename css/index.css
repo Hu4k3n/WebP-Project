@@ -96,6 +96,20 @@ h1 {
     background: black;
 }
 
+.landing .login-btn {
+    position: relative;
+    cursor: pointer;
+    font-size: 36px;
+    padding: 10px 20px;
+    border: 2px solid #0f0f3f;
+    margin: 50px 10px;
+    border-radius: 0;
+    background: white;
+    color: #0f0f3f;
+    transition-duration: 0.2s;
+    animation: fade-in 1s;
+}
+
 nav {
     display: flex;
     position: fixed;
@@ -138,7 +152,7 @@ nav a {
 }
 
 nav a:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-bottom: 5px solid grey;
 }
 
