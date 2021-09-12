@@ -26,13 +26,11 @@
 
 ## About the project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/Hu4k3n/WebP-Project)
-
 Web coursera is a platform that enables high quality, affordable and flexible learning experiences. Our curated collection of business and technical courses help individuals, companies, governments, and nonprofits go further by placing learning at the center of their strategies. As a global destination for online learning, we strive to connect people through knowledge.
 
 ## Objective
 
-To build a courses' website with the given specifications. The course page should list references required for the course including notes, books etc. There should also be recorded sessions of lectures with functionality to categorize and filter videos based on their duration.
+To build a e-learning website with the given specifications. The course page should list references required for the course including notes, books etc. There should also be recorded sessions of lectures with functionality to categorize and filter videos based on their duration.
 
 ## Website Structure
 
