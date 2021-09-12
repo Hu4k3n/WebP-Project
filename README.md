@@ -57,3 +57,12 @@ To build a courses' website with the given specifications. The course page shoul
 
 -   Footer
     ![](resources/footer-ss.png)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/badge/Conitrbutors-3-brightgreen
+[contributors-url]: https://github.com/Hu4k3n/WebP-Project/graphs/contributors
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-url]: https://github.com/Hu4k3n/WebP-Project/issues
+[license-shield]: https://img.shields.io/badge/license-MIT-orange
+[license-url]: https://github.com/Hu4k3n/WebP-Project/blob/master/LICENSE.txt
+[product-screenshot]: resources/landing-page-ss.png
