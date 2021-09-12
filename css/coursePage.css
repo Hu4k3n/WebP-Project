@@ -83,6 +83,15 @@ hr.moduleDivision {
     height: 30px;
 }
 
+.moduleContents label a {
+    text-decoration: none;
+    color: white;
+}
+
+.moduleContents label a i {
+    font-size: x-large;
+}
+
 .course {
     display: flex;
     flex-direction: column;
