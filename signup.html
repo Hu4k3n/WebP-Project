@@ -13,21 +13,40 @@
         <nav>
             <div class="row center">
                 <a class="active" href="#">Home</a>
-                <a href="#">About</a>
+                <a style="cursor: pointer" onclick="window.scrollBy(0,500)"
+                    >About</a
+                >
                 <a href="pages/courses.html">Courses</a>
-                <a href="#">Teachers</a>
-                <a href="#">Contact</a>
+                <a href="pages/teachers.html">Mentors</a>
+                <a style="cursor: pointer" onclick="window.scrollBy(0,500)"
+                    >Contact</a
+                >
             </div>
         </nav>
-
         <div class="login">
             <h1>Sign Up</h1>
-            <input name="fullname" placeholder="Enter Full Name"/>
-            <input name="username" placeholder="Enter username"/>
-            <input name="password" type="password" placeholder="Enter password"/>
-            <input name="repassword" type="password" placeholder="Renter password"/>
-            <div class="row center"><input type="checkbox"><label>Agree to the Terms and Privacy Policy</label></div>
-            <label>Already have an account?&nbsp;<a href="login.html">Login</a></label>
+            <input name="fullname" placeholder="Enter Full Name" />
+            <input name="username" placeholder="Enter username" />
+            <input
+                name="password"
+                type="password"
+                placeholder="Enter password"
+            />
+            <input
+                name="repassword"
+                type="password"
+                placeholder="Renter password"
+            />
+            <div class="row center">
+                <input type="checkbox" /><label
+                    >Agree to the Terms and Privacy Policy</label
+                >
+            </div>
+            <label
+                >Already have an account?&nbsp;<a href="login.html"
+                    >Login</a
+                ></label
+            >
             <button onclick="window.location.href = 'index.html';">
                 Sign-Up
             </button>
