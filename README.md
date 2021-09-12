@@ -11,7 +11,7 @@
   <h3 align="center">Web Coursera</h3>
 
   <p align="center">
-    An affordable e-learning website for everyone!
+    An Affordable e-learning experience for everyone!
     <br />
     <a href="https://github.com/Hu4k3n/WebP-Project"><strong>Explore the docs »</strong></a>
     <br />
@@ -30,7 +30,7 @@ Web coursera is a platform that enables high quality, affordable and flexible le
 
 ## Objective
 
-To build a e-learning website with the given specifications. The course page should list references required for the course including notes, books etc. There should also be recorded sessions of lectures with functionality to categorize and filter videos based on their duration.
+To build an e-learning website with the given specifications. The course page should list references required for the course including notes, books etc. There should also be recorded sessions of lectures with functionality to categorize and filter videos based on their duration.
 
 ## Website Structure
 
