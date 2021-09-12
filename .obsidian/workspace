@@ -1,0 +1,96 @@
+{
+  "main": {
+    "id": "03bfd3b2a422be09",
+    "type": "split",
+    "children": [
+      {
+        "id": "b76f5a670ec29832",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c7af96ac1f50405d",
+    "type": "split",
+    "children": [
+      {
+        "id": "4b87ecaa6cb1d47d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4d724e14ea041045",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "cae36eabcba0c3a8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "82bad8626b1ee000",
+    "type": "split",
+    "children": [
+      {
+        "id": "c8c378bcc2d8f61d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4ee35cd593b86190",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "b76f5a670ec29832",
+  "lastOpenFiles": [
+    "README.md",
+    "images/logo.png",
+    "resources/landing-page-ss.png",
+    "resources/courses-page-ss.png"
+  ]
+}

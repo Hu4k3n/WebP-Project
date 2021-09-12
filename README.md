@@ -1,6 +1,24 @@
-# Web Coursera
+<br />
+<p align="center">
+  <a href="https://github.com/Hu4k3n/WebP-Project">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-Web coursera is a platform that enables high quality, affordable and flexible learning by providing self-paced courses.
+  <h3 align="center">Web Coursera</h3>
+
+  <p align="center">
+    Web coursera is a platform that enables high quality, affordable and flexible learning experiences. Our curated collection of business and technical courses help individuals, companies, governments, and nonprofits go further by placing learning at the center of their strategies. As a global destination for online learning, we connect people through knowledge.
+    <br />
+    <a href="https://github.com/Hu4k3n/WebP-Project"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/Hu4k3n/WebP-Project">View Files</a>
+    ·
+    <a href="https://github.com/Hu4k3n/WebP-Project/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Hu4k3n/WebP-Project/issues">Request Feature</a>
+  </p>
+</p>
 
 ## Objective
 
