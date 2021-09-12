@@ -50,7 +50,7 @@ To build an e-learning website with the given specifications. The course page sh
 -   Courses Page
     ![](resources/courses-page-ss.png)
 
--   HTML Course Page (other Course pages have similar layout)
+-   Java Course Page (other Course pages have similar layout)
     ![](resources/html-course-ss.png)
 
 -   Mentors Page
