@@ -53,6 +53,9 @@ To build a e-learning website with the given specifications. The course page sho
 -   HTML Course Page (other Course pages have similar layout)
     ![](resources/html-course-ss.png)
 
+-   Mentors Page
+    ![](resources/mentors-ss.png)
+
 -   Login Page
     ![](resources/login-page-ss.png)
 
