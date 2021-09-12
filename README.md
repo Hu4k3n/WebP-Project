@@ -1,10 +1,6 @@
-[![Contributors][https://img.shields.io/badge/Conitrbutors-3-brightgreen]][https://github.com/Hu4k3n/WebP-Project/graphs/contributors]
-<!-- [![MIT License][https://img.shields.io/badge/license-MIT-orange]][license-url] -->
-
-<br />
 <p align="center">
   <a href="https://github.com/Hu4k3n/WebP-Project">
-    <img src="images/logo.png" alt="Logo" width="359" height="80">
+    <img src="images/logo.png" alt="Logo" height="80">
   </a>
 
   <h3 align="center">Web Coursera</h3>
