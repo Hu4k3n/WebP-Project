@@ -11,7 +11,7 @@
   <h3 align="center">Web Coursera</h3>
 
   <p align="center">
-    An affordable e-learning website for everyone!
+    An Affordable e-learning experience for everyone!
     <br />
     <a href="https://github.com/Hu4k3n/WebP-Project"><strong>Explore the docs »</strong></a>
     <br />
