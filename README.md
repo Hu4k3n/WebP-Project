@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Hu4k3n/WebP-Project">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="359" height="80">
   </a>
 
   <h3 align="center">Web Coursera</h3>
@@ -42,3 +42,15 @@ To build a courses' website with the given specifications. The course page shoul
 
 -   Courses Page
     ![](resources/courses-page-ss.png)
+
+-   HTML Course Page (other Course pages have similar layout)
+    ![](resources/html-course-ss.png)
+
+-   Login Page
+    ![](resources/login-page-ss.png)
+
+-   Sign-Up Page
+    ![](resources/signup-page-ss.png)
+
+-   Footer
+    ![](resources/footer-ss.png)
