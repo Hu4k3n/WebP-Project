@@ -1,3 +1,4 @@
+<?php include('auth.php') ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,10 +24,14 @@
                 >
             </div>
         </nav>
+    <?php if (count($errors) != 0) {
+        echo '<script>alert("Error Encountered: ' . $errors[0] . '")</script>';
+    } ?>
+    <form method="post" action="signup.php" style="padding:0; margin:0;">
         <div class="login">
             <h1>Sign Up</h1>
-            <input name="fullname" placeholder="Enter Full Name" />
-            <input name="username" placeholder="Enter username" />
+            <input name="fullname" placeholder="Enter Full Name" value="<?php echo $fullname; ?>" />
+            <input name="username" placeholder="Enter username" value="<?php echo $username; ?>" />
             <input
                 name="password"
                 type="password"
@@ -43,14 +48,15 @@
                 >
             </div>
             <label
-                >Already have an account?&nbsp;<a href="login.html"
+                >Already have an account?&nbsp;<a href="login.php"
                     >Login</a
                 ></label
             >
-            <button onclick="window.location.href = 'index.html';">
+            <button type ="submit" name="sign_up">
                 Sign-Up
             </button>
         </div>
+    </form>
 
         <footer>
             <div class="container">
