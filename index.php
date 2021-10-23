@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <nav>
+    <nav >
         <div class="row center">
             <a class="active" href="#">Home</a>
             <a style="cursor: pointer" onclick="window.scrollBy(0,document.body.scrollHeight)">About</a>
@@ -17,6 +17,11 @@
             <a href="pages/teachers.html">Mentors</a>
             <a style="cursor: pointer" onclick="window.scrollBy(0,document.body.scrollHeight)">Contact</a>
         </div>
+            <?php 
+            if(isset($_SESSION['username'])):
+                echo "<a href=\"#\">" . $_SESSION['username'] . "</a>";
+            endif;
+            ?> 
     </nav>
 
     <div class="landing">
@@ -46,9 +51,10 @@
             </button>
         </div>
         <?php else:
-            echo $_SESSION['username'];
             ?>
-            <a href='logout.php'>Click here to log out</a>
+            <button class="signup-btn" onclick="window.location.href = 'logout.php';">
+                Logout
+            </button>
         <?php endif; 
 ?>
     </div>
