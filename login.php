@@ -13,7 +13,7 @@
     <body>
         <nav>
             <div class="row center">
-                <a class="active" href="#">Home</a>
+                <a class="active" href="index.php">Home</a>
                 <a style="cursor: pointer" onclick="window.scrollBy(0,document.body.scrollHeight)"
                     >About</a
                 >
