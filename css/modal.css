@@ -80,3 +80,33 @@ h1 {
     width: 10em;
     border-radius: 10px;
 }
+
+
+table {
+    /* width: 800px; */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-collapse: collapse;
+    width: 10em;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(5, 0, 0);
+}
+
+th {
+    text-align: center;
+}
+
+.thead.th {
+    background-color: #55608f;
+}
+
+.tbody.td {
+    position: relative;
+}
