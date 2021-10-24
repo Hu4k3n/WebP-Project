@@ -191,6 +191,13 @@ nav a.active {
     justify-content: center;
 }
 
+.usernav {
+    position: absolute;
+    right: 2em;
+    padding: 5px 20px;
+}
+
+
 footer {
     position: relative;
     width: 100%;

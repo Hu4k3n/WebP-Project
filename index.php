@@ -5,11 +5,13 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <script type="text/javascript" src="js/modal.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
 <body>
-    <nav >
+    <nav>
         <div class="row center">
             <a class="active" href="#">Home</a>
             <a style="cursor: pointer" onclick="window.scrollBy(0,document.body.scrollHeight)">About</a>
@@ -17,11 +19,23 @@
             <a href="pages/teachers.html">Mentors</a>
             <a style="cursor: pointer" onclick="window.scrollBy(0,document.body.scrollHeight)">Contact</a>
         </div>
+        <div class="usernav">
             <?php 
-            if(isset($_SESSION['username'])):
-                echo "<a href=\"#\">" . $_SESSION['username'] . "</a>";
-            endif;
-            ?> 
+            if(isset($_SESSION['username'])):?>
+                <a href="#"aria-haspopup="true" onclick="openModal()"> <?php echo $_SESSION['username']; ?></a>
+            <div class="mask" role="dialog" id="mask"></div>
+            <div class="modal" role="alert">
+                <button class="close" role="button" onclick="closeModal()">
+                    <i class="fa fa-close" style="position:relative;top:0px;left:0px;"></i>
+                </button>
+            <h1> Hello there <?php echo $_SESSION['username'] ?>!</h1>
+            <div>
+                <button class="logout" onclick="window.location.href = 'logout.php';">Logout</button>
+            </div>
+            </div>
+            
+            <?php endif; ?>
+            </div>
     </nav>
 
     <div class="landing">
@@ -52,11 +66,8 @@
         </div>
         <?php else:
             ?>
-            <button class="signup-btn" onclick="window.location.href = 'logout.php';">
-                Logout
-            </button>
-        <?php endif; 
-?>
+            
+        <?php endif; ?>
     </div>
 
     <footer>

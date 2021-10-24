@@ -1,9 +1,6 @@
 <?php
 session_start();
 
-// initializing variables
-$errors = array(); 
-
 // connect to the database
 $db = mysqli_connect('localhost', 'monkeywings', '3p1cburg3r', 'eLearningDB');
 
@@ -23,3 +20,4 @@ while($row = mysqli_fetch_array($result))
     echo "</tr>";
 }
 echo "</table>";
+?>
