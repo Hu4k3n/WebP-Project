@@ -7,7 +7,7 @@ $fullname = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost', 'monkeywings', '3p1cburg3r', 'eLearningDB');
+$db = mysqli_connect('localhost', 'haux', 'root', 'eLearningDB');
 
 // Register new user
 if (isset($_POST['sign_up'])) {
@@ -78,6 +78,34 @@ if (isset($_POST['login'])) {
         }
     }
 }
+// register for html
+if (isset($_POST['register_course'])){
+    $username = mysqli_real_escape_string($db, $_SESSION['username']);
+    $course_id = mysqli_real_escape_string($db, $_POST['course_id']);
+    $query = "select id from users where '$username'=username;";
+    $results = mysqli_query($db, $query);
+    $personid = mysqli_fetch_array($results);
+    $query = "insert into reg_course values ($course_id, {$personid['id']}, 0);";
+    mysqli_query($db, $query);
+    // error_log(print_r($io, TRUE)); 
+}
+// completed the course
+if(isset($_POST['completed_course'])){
+    $username = mysqli_real_escape_string($db, $_SESSION['username']);
+    $course_id = mysqli_real_escape_string($db, $_POST['course_id']);
+    $query = "select id from users where '$username'=username;";
+    $results = mysqli_query($db, $query);
+    $personid = mysqli_fetch_array($results);
 
-
+    $query = "delete from reg_course where $course_id=course_id and {$personid['id']}=person_id;";
+    mysqli_query($db, $query);
+    $query = "select count(*) from reg_course where {$personid['id']}=person_id;";
+    $results = mysqli_query($db, $query);
+    $number_of_courses = mysqli_fetch_array($results);
+    error_log(print_r($number_of_courses[0], TRUE)); 
+    if($number_of_courses[0]==0){
+        $query = "delete from users where {$personid['id']}=id;";
+        mysqli_query($db, $query);
+    }
+}
 ?>
