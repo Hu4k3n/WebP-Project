@@ -1,14 +1,13 @@
-<?php include('auth.php') ?>
+<?php include('php/auth.php') ?>
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/modal.css" />
-    <script type="text/javascript" src="js/modal.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-</head>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/modal.css" />
+        <script type="text/javascript" src="js/modal.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    </head>
 
 <body>
     <?php include('nav.php') ?>
@@ -28,21 +27,18 @@
             </button>
         </div>
 
-        <?php
-        if(!isset($_SESSION['username'])):?>
-        <div class="row">
-            <button onclick="window.location.href = 'login.php';">
-                Login
-            </button>
-            <button class="signup-btn" onclick="window.location.href = 'signup.php';">
-                Sign Up
-            </button>
+            <?php
+            if(!isset($_SESSION['username'])):?>
+            <div class="row">
+                <button onclick="window.location.href = 'php/login.php';">
+                    Login
+                </button>
+                <button class="signup-btn" onclick="window.location.href = '/php/signup.php';">
+                    Sign Up
+                </button>
+            </div>
+            <?php endif; ?>
         </div>
-        <?php else:
-            ?>
-            
-        <?php endif; ?>
-    </div>
 
     <?php include('footer.php'); ?>
 </body>

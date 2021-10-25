@@ -36,7 +36,7 @@
                 </tbody>
             </table>
         <div>
-            <button class="logout" onclick="window.location.href = 'logout.php';">Logout</button>
+            <button class="logout" onclick="window.location.href = '/php/logout.php';">Logout</button>
         </div>
         
         </div>

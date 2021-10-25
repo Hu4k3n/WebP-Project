@@ -3,7 +3,7 @@ session_start();
 
 // initializing variables
 $username = "";
-$fullname    = "";
+$fullname = "";
 $errors = array(); 
 
 // connect to the database
@@ -35,6 +35,10 @@ if (isset($_POST['sign_up'])) {
     if ($user) { // if user exists
         array_push($errors, "Username already exists");
     }
+
+    if (!isset($_POST['termsnconditions'])){
+        array_push($errors, "Please agree to Terms and Conditions.");
+    }
     
     // Finally, register user if there are no errors in the form
     if (count($errors) == 0) {
@@ -45,7 +49,7 @@ if (isset($_POST['sign_up'])) {
         mysqli_query($db, $query);
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "You are now logged in";
-        header('location: index.php');
+        header('location: ../index.php');
     }
 }
 
@@ -68,7 +72,7 @@ if (isset($_POST['login'])) {
         if (mysqli_num_rows($results) == 1) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You are now logged in";
-            header('location: index.php');
+            header('location: ../index.php');
         }else {
             array_push($errors, "Wrong username/password combination");
         }
