@@ -197,7 +197,6 @@ nav a.active {
     padding: 5px 20px;
 }
 
-
 footer {
     position: relative;
     width: 100%;
@@ -341,4 +340,82 @@ footer p {
     padding: 8px 100px;
     text-align: center;
     color: white;
+}
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    min-height: 100vh;
+    background: #0f0f3f;
+    color: white;
+    padding: 120px 15% 30px 15%;
+}
+
+.search-section p {
+    font-size: 22px;
+    margin: 20px;
+}
+
+.search-section form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.search-section input {
+    display: flex;
+    flex-grow: 100;
+    margin: 10px 20px;
+    padding: 10px 30px;
+    font-size: 22px;
+}
+
+.search-section button {
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    margin: 10px 20px;
+    border-radius: 0;
+    background: #0f0f3f;
+    color: white;
+    transition-duration: 0.2s;
+    animation: fade-in 1s;
+}
+
+.search-section a {
+    color: white;
+}
+
+.search-section button:hover {
+    background: #4f4f7f;
+    color: white;
+}
+
+.search-section .card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    cursor: pointer;
+    background: #090922;
+    color: white;
+    font-size: 20px;
+    width: 90%;
+    padding: 30px;
+    margin: 20px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    transition-duration: 0.2s;
+}
+
+.search-section .card:hover {
+    background: rgb(17, 17, 53);
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.5);
+}
+
+.search-section .card:active {
+    background: rgb(9, 9, 27);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
