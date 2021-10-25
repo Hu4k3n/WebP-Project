@@ -10,6 +10,7 @@
             href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         />
     </head>
+
     <body>
         <nav>
             <div class="row center">
@@ -24,39 +25,39 @@
                 >
             </div>
         </nav>
-    <?php if (count($errors) != 0) {
-        echo '<script>alert("Error Encountered: ' . $errors[0] . '")</script>';
-    } ?>
-    <form method="post" action="signup.php" style="padding:0; margin:0;">
-        <div class="login">
-            <h1>Sign Up</h1>
-            <input name="fullname" placeholder="Enter Full Name" value="<?php echo $fullname; ?>" />
-            <input name="username" placeholder="Enter username" value="<?php echo $username; ?>" />
-            <input
-                name="password"
-                type="password"
-                placeholder="Enter password"
-            />
-            <input
-                name="repassword"
-                type="password"
-                placeholder="Renter password"
-            />
-            <div class="row center">
-                <input type="checkbox" name="termsnconditions"/><label
-                    >Agree to the Terms and Privacy Policy</label
-                >
+
+        <?php if (count($errors) != 0) {
+            echo '<script>alert("Error Encountered: ' . $errors[0] . '")</script>';
+        } ?>
+
+        <form method="post" action="signup.php" style="padding:0; margin:0;">
+            <div class="login">
+                <h1>Sign Up</h1>
+                <input name="fullname" placeholder="Enter Full Name" value="<?php echo $fullname; ?>" />
+                <input name="username" placeholder="Enter username" value="<?php echo $username; ?>" />
+                <input
+                    name="password"
+                    type="password"
+                    placeholder="Enter password"
+                />
+                <input
+                    name="repassword"
+                    type="password"
+                    placeholder="Renter password"
+                />
+                <div class="row center">
+                    <input type="checkbox" name="termsnconditions"/>
+                    <label>Agree to the Terms and Privacy Policy</label>
+                </div>
+                <label>
+                    Already have an account?&nbsp;
+                    <a href="login.php">Login</a>
+                </label>
+                <button type ="submit" name="sign_up">
+                    Sign-Up
+                </button>
             </div>
-            <label
-                >Already have an account?&nbsp;<a href="login.php"
-                    >Login</a
-                ></label
-            >
-            <button type ="submit" name="sign_up">
-                Sign-Up
-            </button>
-        </div>
-    </form>
+        </form>
 
         <footer>
             <div class="container">
