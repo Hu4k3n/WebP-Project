@@ -1,4 +1,4 @@
-<?php include('auth.php') ?>
+<?php include('php/auth.php') ?>
 <!DOCTYPE html>
 <html>
 
@@ -49,7 +49,7 @@
                     </tbody>
                 </table>
             <div>
-                <button class="logout" onclick="window.location.href = 'logout.php';">Logout</button>
+                <button class="logout" onclick="window.location.href = 'php/logout.php';">Logout</button>
             </div>
             
             </div>
@@ -77,10 +77,10 @@
         <?php
         if(!isset($_SESSION['username'])):?>
         <div class="row">
-            <button onclick="window.location.href = 'login.php';">
+            <button onclick="window.location.href = 'php/login.php';">
                 Login
             </button>
-            <button class="signup-btn" onclick="window.location.href = 'signup.php';">
+            <button class="signup-btn" onclick="window.location.href = 'php/signup.php';">
                 Sign Up
             </button>
         </div>
