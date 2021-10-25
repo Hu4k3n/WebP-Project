@@ -1,25 +1,58 @@
+<?php include('php/auth.php') ?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/index.css" />
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
+        <link rel="stylesheet" href="css/modal.css" />
+        <script type="text/javascript" src="js/modal.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     </head>
+
     <body>
         <nav>
             <div class="row center">
                 <a class="active" href="#">Home</a>
-                <a style="cursor: pointer" onclick="window.scrollBy(0,document.body.scrollHeight)"
-                    >About</a
-                >
+                <a style="cursor: pointer" onclick="window.scrollBy(0,document.body.scrollHeight)">About</a>
                 <a href="pages/courses.html">Courses</a>
                 <a href="pages/teachers.html">Mentors</a>
-                <a style="cursor: pointer" onclick="window.scrollBy(0,document.body.scrollHeight)"
-                    >Contact</a
-                >
+                <a style="cursor: pointer" onclick="window.scrollBy(0,document.body.scrollHeight)">Contact</a>
+            </div>
+
+            <div class="usernav">
+                <?php 
+                if(isset($_SESSION['username'])):?>
+                    <a href="#"aria-haspopup="true" onclick="openModal()"> <?php echo $_SESSION['username']; ?></a>
+                <div class="mask" role="dialog" id="mask"></div>
+                <div class="modal" role="alert">
+                    <button class="close" role="button" onclick="closeModal()">
+                        <i class="fa fa-close" style="position:relative;top:0px;left:0px;"></i>
+                    </button>
+                    <h1> Hello there <?php echo $_SESSION['username'] ?>!</h1>
+                    <table>
+                        <thead class="thead">
+                            <tr>
+                                <th class="th"> Registered Users </th>
+                            <tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <?php 
+                                $user_list_query = "SELECT * FROM users";
+                                $result = mysqli_query($db, $user_list_query);
+                                $users = mysqli_fetch_array($result);
+
+                                while($row = mysqli_fetch_array($result))
+                                {
+                                    echo "<tr class=\"tr\"><td>" . $row['username'] . "</td></tr>";
+                                }
+                                ?>
+                        </tbody>
+                    </table>
+                    <div>
+                        <button class="logout" onclick="window.location.href = 'php/logout.php';">Logout</button>
+                    </div>
+                </div>
+                <?php endif; ?>
             </div>
         </nav>
 
@@ -33,31 +66,25 @@
                 courses to job-ready certificates and degree programs.
             </p>
             <div class="row">
-                <input
-                    type="text"
-                    placeholder="Start learning... Search for a course"
-                />
+                <input type="text" placeholder="Start learning... Search for a course" />
                 <button onclick="window.location.href = 'pages/courses.html';">
                     <i class="fa fa-search"></i>
                 </button>
             </div>
-            
-            <div class="row">
-            <button
-                onclick="window.location.href = 'login.html';"
-            >
-                Login
-            </button>
-            <button
-            class="signup-btn"
 
-                onclick="window.location.href = 'signup.html';"
-            >
-                Sign Up
-            </button>
+            <?php
+            if(!isset($_SESSION['username'])):?>
+            <div class="row">
+                <button onclick="window.location.href = 'php/login.php';">
+                    Login
+                </button>
+                <button class="signup-btn" onclick="window.location.href = 'php/signup.php';">
+                    Sign Up
+                </button>
+            </div>
+            <?php endif; ?>
         </div>
-        </div>
-        
+
         <footer>
             <div class="container">
                 <div class="sec aboutus">
@@ -78,33 +105,16 @@
                     </p>
                     <ul class="sci">
                         <li>
-                            <a href="#"
-                                ><i
-                                    class="fa fa-facebook"
-                                    aria-hidden="true"
-                                ></i
-                            ></a>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="#"
-                                ><i class="fa fa-twitter" aria-hidden="true"></i
-                            ></a>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="#"
-                                ><i
-                                    class="fa fa-instagram"
-                                    aria-hidden="true"
-                                ></i
-                            ></a>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="#"
-                                ><i
-                                    class="fa fa-youtube-play"
-                                    aria-hidden="true"
-                                ></i
-                            ></a>
+                            <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -123,26 +133,14 @@
                     <h2>Contact Info</h2>
                     <ul class="info">
                         <li>
-                            <span
-                                ><i class="fa fa-phone" aria-hidden="true"></i
-                            ></span>
+                            <span><i class="fa fa-phone" aria-hidden="true"></i></span>
                             <span>
-                                <a href="tel:918899889988">+91 889 988 9988</a
-                                ><br /><a href="tel:918921710488"
-                                    >+91 892 171 0488</a
-                                >
+                                <a href="tel:918899889988">+91 889 988 9988</a><br /><a href="tel:918921710488">+91 892 171 0488</a>
                             </span>
                         </li>
                         <li>
                             <span>
-                                <i
-                                    class="fa fa-envelope"
-                                    aria-hidden="true"
-                                ></i></span
-                            ><span
-                                ><a href="mailto:support@webcoursera.edu"
-                                    >support@webcoursera.edu</a
-                                >
+                                <i class="fa fa-envelope" aria-hidden="true"></i></span><span><a href="mailto:support@webcoursera.edu">support@webcoursera.edu</a>
                             </span>
                         </li>
                     </ul>

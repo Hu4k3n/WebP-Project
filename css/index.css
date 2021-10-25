@@ -14,9 +14,11 @@
     from {
         transform: translate(0, 0);
     }
+
     50% {
         transform: translate(4px, 0px);
     }
+
     to {
         transform: translate(0, 0);
     }
@@ -188,6 +190,13 @@ nav a.active {
 .row.center {
     justify-content: center;
 }
+
+.usernav {
+    position: absolute;
+    right: 2em;
+    padding: 5px 20px;
+}
+
 
 footer {
     position: relative;
