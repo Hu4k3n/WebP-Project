@@ -24,29 +24,30 @@
                 >
             </div>
         </nav>
-    <?php if (count($errors) != 0) {
-        echo '<script>alert("Invalid Credentials.")</script>';
-    } ?>
-    <form method="post" action="login.php" style="padding:0; margin:0;">
 
-        <div class="login">
-            <h1>Login</h1>
-            <input name="username" placeholder="Enter username" />
-            <input
-                name="password"
-                type="password"
-                placeholder="Enter password"
-            />
-            <label
-                >Don't have an account?&nbsp;<a href="signup.php"
-                    >Sign-Up</a
-                ></label
-            >
-            <button type="submit" name="login">
-                Login
-            </button>
-        </div>
-    </form>
+        <?php if (count($errors) != 0) {
+            echo '<script>alert("Invalid Credentials.")</script>';
+        } ?>
+        
+        <form method="post" action="login.php" style="padding:0; margin:0;">
+
+            <div class="login">
+                <h1>Login</h1>
+                <input name="username" placeholder="Enter username" />
+                <input
+                    name="password"
+                    type="password"
+                    placeholder="Enter password"
+                />
+                <label>Don't have an account?&nbsp;
+                    <a href="signup.php">Sign-Up</a>
+                </label>
+                <button type="submit" name="login">
+                    Login
+                </button>
+            </div>
+        </form>
+
         <footer>
             <div class="container">
                 <div class="sec aboutus">
