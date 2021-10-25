@@ -20,12 +20,12 @@
             range of learning opportunities, from hands-on projects and
             courses to job-ready certificates and degree programs.
         </p>
-        <div class="row">
-            <input type="text" placeholder="Start learning... Search for a course" />
-            <button onclick="window.location.href = 'pages/courses.html';">
+        <form class="row" method="get" action="search.php">
+            <input type="text" name="term" placeholder="Start learning... Search for a course" />
+            <button type="submit">
                 <i class="fa fa-search"></i>
-            </button>
-        </div>
+            </button>  
+        </form>
 
             <?php
             if(!isset($_SESSION['username'])):?>
