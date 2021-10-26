@@ -13,7 +13,8 @@
 
 <body>
     <nav>
-        <i class="fa fa-angle-left" style="font-size: 50px; cursor: pointer" onclick="window.location.href = '../pages/courses.html';"></i>
+        <i class="fa fa-angle-left" style="font-size: 50px; cursor: pointer"
+            onclick="window.location.href = '../pages/courses.html';"></i>
         <div class="row center">
             <a href="../index.php">Home</a>
             <a style="cursor: pointer" onclick="window.scrollTo(0, document.body.scrollHeight)">About</a>
@@ -37,66 +38,73 @@
         </div>
     </div>
     <?php
-    // if(isset($_SESSION['username'])){    
+    if (!isUserRegistered(1)) {
         echo '
-    <div class="course">
-        <div class="module">
-            <hr class="section" />
-            <h1>References</h1>
-            <hr class="moduleHeading" />
-            <br />
-            <div class="moduleContents">
-                <input type="checkbox" id="reference1" name="reference1
-                    value=" books">
-                <label for="references1"><a href="https://www.dashskilledutrain.com/assets/Books/Html%20CSS%20The%20Complete%20Reference.pdf" target="_blank">HTML & CSS: The Complete Reference, Fifth Edition <i class="fa fa-external-link"></i></a></label><br />
-                <input type="checkbox" id="reference1" name="reference1
-                    value=" books">
-                <label for="references1"><a href="https://www.tutorialspoint.com/html/html_tutorial.pdf" target="_blank">HTML Tutorial <i class="fa fa-external-link"></i></a></label><br />
-                <input type="checkbox" id="reference1" name="reference1
-                    value=" books">
-                <label for="references1"> <a href="https://d0wnl0ads.files.wordpress.com/2011/08/wiley-html-4-for-dummies.pdf" target="_blank">HTML 4 for Dummies <i class="fa fa-external-link"></i></a></label><br /><br />
+        <div class="course">
+        <div class="row center">
+            <form action="htmlCourse.php" method="post">
+                <input type="hidden" name="course_id" value="1">
+                <button type="submit" name="register_course" class="signup-btn">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+        ';
+    } else {
+        echo '
+        
+        <div class="course">
+            <div class="module">
+                <hr class="section" />
+                <h1>References</h1>
+                <hr class="moduleHeading" />
+                <br />
+                <div class="moduleContents">
+                    <input type="checkbox" id="reference1" name="reference1
+                                value=" books">
+                    <label for="references1"><a
+                            href="https://www.dashskilledutrain.com/assets/Books/Html%20CSS%20The%20Complete%20Reference.pdf"
+                            target="_blank">HTML & CSS: The Complete Reference, Fifth Edition <i
+                                class="fa fa-external-link"></i></a></label><br />
+                    <input type="checkbox" id="reference1" name="reference1
+                                value=" books">
+                    <label for="references1"><a href="https://www.tutorialspoint.com/html/html_tutorial.pdf"
+                            target="_blank">HTML Tutorial <i class="fa fa-external-link"></i></a></label><br />
+                    <input type="checkbox" id="reference1" name="reference1
+                                value=" books">
+                    <label for="references1"> <a
+                            href="https://d0wnl0ads.files.wordpress.com/2011/08/wiley-html-4-for-dummies.pdf"
+                            target="_blank">HTML 4 for Dummies <i class="fa fa-external-link"></i></a></label><br /><br />
+                </div>
+            </div>
+            <div class="row center">
+                <label>Filter: </label>
+                <select id="filter">
+                    <option value="all">None</option>
+                    <option value="short">Short</option>
+                    <option value="medium">Medium</option>
+                    <option value="long">Long</option>
+                </select>
+            </div>
+            <div id="course"></div>
+        </div>
+        <script type="text/javascript" src="../js/htmlCourse.js"></script>
+        <script type="text/javascript" src="../js/rendercourse.js"></script>
+    
+        <div class="course">
+            <div class="row center">
+                <form action="" method="post">
+                    <input type="hidden" name="course_id" value="1">
+                    <button type="submit" name="completed_course" class="signup-btn">
+                        Completed
+                    </button>
+                </form>
             </div>
         </div>
-        <div class="row center">
-            <label>Filter: </label>
-            <select id="filter">
-                <option value="all">None</option>
-                <option value="short">Short</option>
-                <option value="medium">Medium</option>
-                <option value="long">Long</option>
-            </select>
-        </div>
-        <div id="course"></div>
-    </div>
-    <script type="text/javascript" src="../js/htmlCourse.js"></script>
-    <script type="text/javascript" src="../js/rendercourse.js"></script>
-    ';
-    // }
-    // else
-    // {
-        
-    // }
+        ';
+    }
     ?>
-    <div class="course">
-        <div class="row center">
-        <form action="" method="post" >
-            <input type="hidden" name="course_id" value="1">
-            <button type="submit"  name="register_course" class="signup-btn">
-                Register
-            </button>
-        </form>
-        </div>
-    </div>
-    <div class="course">
-        <div class="row center">
-        <form action="" method="post" >
-            <input type="hidden" name="course_id" value="1">
-            <button type="submit"  name="completed_course" class="signup-btn">
-                Completed
-            </button>
-        </form>
-        </div>
-    </div>
     <footer>
         <div class="container">
             <div class="sec aboutus">
@@ -135,9 +143,11 @@
                 <h2>Quick Links</h2>
                 <ul>
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="https://www.privacypolicies.com/live/4e0bbccc-8fb1-4619-b3b1-3ccc16909a8d" target="_blank">Privacy Policy</a></li>
+                    <li><a href="https://www.privacypolicies.com/live/4e0bbccc-8fb1-4619-b3b1-3ccc16909a8d"
+                            target="_blank">Privacy Policy</a></li>
                     <li><a href="#">Help & Support</a></li>
-                    <li><a href="https://www.termsandconditionsgenerator.com/live.php?token=b7UtdrWNSWg9TQbYnWcA4yZtLV9Yiqoi" target="_blank">Terms & Conditions</a></li>
+                    <li><a href="https://www.termsandconditionsgenerator.com/live.php?token=b7UtdrWNSWg9TQbYnWcA4yZtLV9Yiqoi"
+                            target="_blank">Terms & Conditions</a></li>
                 </ul>
             </div>
 
@@ -147,12 +157,14 @@
                     <li>
                         <span><i class="fa fa-phone" aria-hidden="true"></i></span>
                         <span>
-                            <a href="tel:918899889988">+91 889 988 9988</a><br /><a href="tel:918921710488">+91 892 171 0488</a>
+                            <a href="tel:918899889988">+91 889 988 9988</a><br /><a href="tel:918921710488">+91 892 171
+                                0488</a>
                         </span>
                     </li>
                     <li>
                         <span>
-                            <i class="fa fa-envelope" aria-hidden="true"></i></span><span><a href="mailto:support@webcoursera.edu">support@webcoursera.edu</a>
+                            <i class="fa fa-envelope" aria-hidden="true"></i></span><span><a
+                                href="mailto:support@webcoursera.edu">support@webcoursera.edu</a>
                         </span>
                     </li>
                 </ul>
