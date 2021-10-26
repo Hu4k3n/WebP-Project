@@ -1,3 +1,4 @@
+<?php include('../php/auth.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,8 +33,13 @@
                         <div class="type">Hour</div>
                     </div>
                     <div class="stat">
-                        <div class="value">12</div>
-                        <div class="type">Modules</div>
+                        <?php
+                        $noOfUsers=countOfRegisteredUsers(1);
+                        echo "
+                        <div class='value'>$noOfUsers</div>
+                        <div class='type'>number of registraions</div>
+                        ";
+                        ?>
                     </div>
                 </div>
 
@@ -52,8 +58,13 @@
                         <div class="type">Hours</div>
                     </div>
                     <div class="stat">
-                        <div class="value">9</div>
-                        <div class="type">Modules</div>
+                    <?php
+                        $noOfUsers=countOfRegisteredUsers(2);
+                        echo "
+                        <div class='value'>$noOfUsers</div>
+                        <div class='type'>number of registraions</div>
+                        ";
+                        ?>
                     </div>
                 </div>
             </div>
@@ -71,8 +82,13 @@
                         <div class="type">Hours</div>
                     </div>
                     <div class="stat">
-                        <div class="value">21</div>
-                        <div class="type">Modules</div>
+                    <?php
+                        $noOfUsers=countOfRegisteredUsers(3);
+                        echo "
+                        <div class='value'>$noOfUsers</div>
+                        <div class='type'>number of registraions</div>
+                        ";
+                        ?>
                     </div>
                 </div>
 
@@ -93,8 +109,13 @@
                         <div class="type">Hours</div>
                     </div>
                     <div class="stat">
-                        <div class="value">18</div>
-                        <div class="type">Modules</div>
+                    <?php
+                        $noOfUsers=countOfRegisteredUsers(4);
+                        echo "
+                        <div class='value'>$noOfUsers</div>
+                        <div class='type'>number of registraions</div>
+                        ";
+                        ?>
                     </div>
                 </div>
             </div>
@@ -112,8 +133,13 @@
                         <div class="type">Hours</div>
                     </div>
                     <div class="stat">
-                        <div class="value">7</div>
-                        <div class="type">Modules</div>
+                    <?php
+                        $noOfUsers=countOfRegisteredUsers(5);
+                        echo "
+                        <div class='value'>$noOfUsers</div>
+                        <div class='type'>number of registraions</div>
+                        ";
+                        ?>
                     </div>
                 </div>
             </div>
@@ -131,8 +157,13 @@
                         <div class="type">Hours</div>
                     </div>
                     <div class="stat">
-                        <div class="value">23</div>
-                        <div class="type">Modules</div>
+                    <?php
+                        $noOfUsers=countOfRegisteredUsers(6);
+                        echo "
+                        <div class='value'>$noOfUsers</div>
+                        <div class='type'>number of registraions</div>
+                        ";
+                        ?>
                     </div>
                 </div>
             </div>

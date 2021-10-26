@@ -86,6 +86,10 @@ if (isset($_POST['login'])) {
 }
 // register for html
 if (isset($_POST['register_course'])) {
+    if (!isset($_SESSION['username']))
+    {
+        header('location:../php/login.php');
+    }
     $username = mysqli_real_escape_string($db, $_SESSION['username']);
     $course_id = mysqli_real_escape_string($db, $_POST['course_id']);
     $query = "select id from users where '$username'=username;";
@@ -119,6 +123,7 @@ if (isset($_POST['completed_course'])) {
 }
 ?>
 <?php
+// to check whether a user is in session before registering
 function isUserRegistered($course_id)
 {
     $db = mysqli_connect('localhost', 'haux', 'root', 'eLearningDB');
@@ -137,5 +142,13 @@ function isUserRegistered($course_id)
     } else {
         return true;
     }
+}
+// to count the number of user registrations in the courses.php
+function countOfRegisteredUsers($course_id){
+    $db = mysqli_connect('localhost', 'haux', 'root', 'eLearningDB');
+    $query = "select count(*) from reg_course where $course_id=course_id;";
+    $results = mysqli_query($db, $query);
+    $noOfUsers = mysqli_fetch_array($results);
+    return $noOfUsers[0];
 }
 ?>
