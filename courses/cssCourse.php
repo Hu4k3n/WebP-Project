@@ -1,3 +1,4 @@
+<?php include('../php/auth.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,16 +8,16 @@
     <link rel="stylesheet" href="../css/coursePage.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <title>Java-CoursePage</title>
+    <title>CSS-CoursePage</title>
 </head>
 
 <body>
     <nav>
-        <i class="fa fa-angle-left" style="font-size: 50px; cursor: pointer" onclick="window.location.href = '../pages/courses.html';"></i>
+        <i class="fa fa-angle-left" style="font-size: 50px; cursor: pointer" onclick="window.location.href = '../pages/courses.php';"></i>
         <div class="row center">
             <a href="../index.php">Home</a>
             <a style="cursor: pointer" onclick="window.scrollTo(0, document.body.scrollHeight)">About</a>
-            <a class="active" href="../pages/courses.html">Courses</a>
+            <a class="active" href="../pages/courses.php">Courses</a>
             <a href="../pages/teachers.html">Mentors</a>
             <a style="cursor: pointer" onclick="window.scrollTo(0, document.body.scrollHeight)">Contact</a>
         </div>
@@ -25,48 +26,75 @@
         <div class="htmllanding">
             <div class="flex-container">
                 <div>
-                    <h1>Java</h1>
+                    <h1>CSS</h1>
                 </div>
             </div>
             <p>
-                Java is a general-purpose computer programming language that
-                is class-based, object-oriented, and designed to have as few
-                dependencies as possible.
+                CSS is the language of the web. It describes how the HTML
+                elements should be displayed.
             </p>
         </div>
     </div>
-
-    <div class="course">
-        <div class="module">
-            <hr class="section" />
-            <h1>References</h1>
-            <hr class="moduleHeading" />
-            <br />
-            <div class="moduleContents">
-                <input type="checkbox" id="reference1" name="reference1
-                    value=" books">
-                <label for="references1"> <a href="https://www.iitk.ac.in/esc101/share/downloads/javanotes5.pdf" target="_blank"> Introduction to Programming Using Java <i class="fa fa-external-link"></i></a></label><br />
-                <input type="checkbox" id="reference1" name="reference1
-                    value=" books">
-                <label for="references1"> <a href="http://vergil.chemistry.gatech.edu/resources/programming/pdf/TIJ2.pdf"> Thinking in Java, Second Edition <i class="fa fa-external-link"></i></a></label><br />
-                <input type="checkbox" id="reference1" name="reference1
-                    value=" books">
-                <label for="references1"><a href="https://gfgc.kar.nic.in/sirmv-science/GenericDocHandler/138-a2973dc6-c024-4d81-be6d-5c3344f232ce.pdf" target="_blank"> Java: The Complete Reference <i class="fa fa-external-link"></i></a></label><br /><br />
+    <?php
+    if (!isUserRegistered(2)) {
+        echo '
+        <div class="course">
+        <div class="row center">
+            <form action="cssCourse.php" method="post">
+                <input type="hidden" name="course_id" value="2">
+                <button type="submit" name="register_course" class="signup-btn">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+        ';
+    }else{
+        echo '
+        <div class="course">
+            <div class="module">
+                <hr class="section" />
+                <h1>References</h1>
+                <hr class="moduleHeading" />
+                <br />
+                <div class="moduleContents">
+                    <input type="checkbox" id="reference1" name="reference1
+                        value=" books">
+                    <label for="references1"><a href="https://www.dashskilledutrain.com/assets/Books/Html%20CSS%20The%20Complete%20Reference.pdf" target="_blank">HTML & CSS: The Complete Reference, Fifth Edition <i class="fa fa-external-link"></i></a></label><br />
+                    <input type="checkbox" id="reference1" name="reference1
+                        value=" books">
+                    <label for="references1"><a href="https://www.tutorialspoint.com/css/css_tutorial.pdf" target="_blank">CSS Tutorial <i class="fa fa-external-link"></i></a></label><br />
+                    <input type="checkbox" id="reference1" name="reference1
+                        value=" books">
+                    <label for="references1"> <a href="http://bedford-computing.co.uk/learning/wp-content/uploads/2016/07/No.Starch.CSS.2nd.Edition.pdf" target="_blank">The Book of CSS3, 2nd Edition <i class="fa fa-external-link"></i></a></label><br /><br />
+                </div>
+            </div>
+            <div class="row center">
+                <label>Filter: </label>
+                <select id="filter">
+                    <option value="all">None</option>
+                    <option value="short">Short</option>
+                    <option value="medium">Medium</option>
+                    <option value="long">Long</option>
+                </select>
+            </div>
+            <div id="course"></div>
+        </div>
+        <script type="text/javascript" src="../js/cssCourse.js"></script>
+        <script type="text/javascript" src="../js/rendercourse.js"></script>
+        <div class="course">
+            <div class="row center">
+                <form action="" method="post">
+                    <input type="hidden" name="course_id" value="2">
+                    <button type="submit" name="completed_course" class="signup-btn">
+                        Completed
+                    </button>
+                </form>
             </div>
         </div>
-        <div class="row center">
-            <label>Filter: </label>
-            <select id="filter">
-                <option value="all">None</option>
-                <option value="short">Short</option>
-                <option value="medium">Medium</option>
-                <option value="long">Long</option>
-            </select>
-        </div>
-        <div id="course"></div>
-    </div>
-    <script type="text/javascript" src="../js/javaCourse.js"></script>
-    <script type="text/javascript" src="../js/rendercourse.js"></script>
+        ';
+    }
+    ?>
     <footer>
         <div class="container">
             <div class="sec aboutus">

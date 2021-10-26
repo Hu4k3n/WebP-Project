@@ -1,3 +1,4 @@
+<?php include('../php/auth.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,12 +13,12 @@
 
 <body>
     <nav>
-        <i class="fa fa-angle-left" style="font-size: 50px; cursor: pointer" onclick="window.location.href = '../pages/courses.html';"></i>
+        <i class="fa fa-angle-left" style="font-size: 50px; cursor: pointer" onclick="window.location.href = '../pages/courses.php';"></i>
         <div class="row center">
             <a href="../index.php">Home</a>
             <a style="cursor: pointer" onclick="window.scrollTo(0, document.body.scrollHeight)">About</a>
-            <a class="active" href="../pages/courses.html">Courses</a>
-            <a href="../pages/teachers.html">Mentors</a>
+            <a class="active" href="../pages/courses.php">Courses</a>
+            <a href="../pages/teachers.php">Mentors</a>
             <a style="cursor: pointer" onclick="window.scrollTo(0, document.body.scrollHeight)">Contact</a>
         </div>
     </nav>
@@ -34,7 +35,22 @@
             </p>
         </div>
     </div>
-
+    <?php
+    if (!isUserRegistered(6)) {
+        echo '
+        <div class="course">
+        <div class="row center">
+            <form action="" method="post">
+                <input type="hidden" name="course_id" value="6">
+                <button type="submit" name="register_course" class="signup-btn">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+        ';
+    } else {
+        echo '
     <div class="course">
         <div class="module">
             <hr class="section" />
@@ -63,6 +79,20 @@
     </div>
     <script type="text/javascript" src="../js/pythonCourse.js"></script>
     <script type="text/javascript" src="../js/rendercourse.js"></script>
+
+        <div class="course">
+        <div class="row center">
+            <form action="" method="post">
+                <input type="hidden" name="course_id" value="6">
+                <button type="submit" name="completed_course" class="signup-btn">
+                    Completed
+                </button>
+            </form>
+        </div>
+    </div>
+    ';
+    }
+    ?>
     <footer>
         <div class="container">
             <div class="sec aboutus">

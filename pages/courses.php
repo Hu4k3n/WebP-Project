@@ -38,7 +38,7 @@
                 </div>
 
             </div>
-            <div class="card" onclick="window.location.href = '../courses/cssCourse.html';">
+            <div class="card" onclick="window.location.href = '../courses/cssCourse.php';">
                 <div class="card-image">
                     <img src="../images/css.jpg" alt="">
                 </div>
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" onclick="window.location.href = '../courses/jsCourse.html';">
+            <div class="card" onclick="window.location.href = '../courses/jsCourse.php';">
                 <div class="card-image">
                     <img src="../images/js.jpg" alt="" style="object-fit: 26em;object-position: -6.75em;">
                 </div>
@@ -79,7 +79,7 @@
             </div>
 
             <!-- Second Row -->
-            <div class="card" onclick="window.location.href = '../courses/javaCourse.html';">
+            <div class="card" onclick="window.location.href = '../courses/javaCourse.php';">
                 <div class="card-image">
                     <img src="../images/java.png" alt="">
                 </div>
@@ -98,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" onclick="window.location.href = '../courses/ajaxCourse.html';">
+            <div class="card" onclick="window.location.href = '../courses/ajaxCourse.php';">
                 <div class="card-image">
                     <img src="../images/ajax.webp" alt="">
                 </div>
@@ -117,7 +117,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" onclick="window.location.href = '../courses/pythonCourse.html';">
+            <div class="card" onclick="window.location.href = '../courses/pythonCourse.php';">
                 <div class="card-image">
                     <img src="../images/python.png" alt="">
                 </div>

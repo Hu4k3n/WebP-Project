@@ -99,13 +99,12 @@ if (isset($_POST['completed_course'])) {
     $username = mysqli_real_escape_string($db, $_SESSION['username']);
     $course_id = mysqli_real_escape_string($db, $_POST['course_id']);
     $query = "select id from users where '$username'=username;";
-    error_log(print_r($query, TRUE));
     $results = mysqli_query($db, $query);
     $personid = mysqli_fetch_array($results);
 
     $query = "delete from reg_course where $course_id=course_id and {$personid['id']}=person_id;";
-    mysqli_query($db, $query);
     error_log(print_r($query, TRUE));
+    mysqli_query($db, $query);
     $query = "select count(*) from reg_course where {$personid['id']}=person_id;";
     $results = mysqli_query($db, $query);
     $number_of_courses = mysqli_fetch_array($results);
@@ -115,8 +114,8 @@ if (isset($_POST['completed_course'])) {
     if ($number_of_courses[0] == 0) {
         $query = "delete from users where {$personid['id']}=id;";
         mysqli_query($db, $query);
+        header('location:../php/logout.php');
     }
-    header('location:../php/logout.php');
 }
 ?>
 <?php
@@ -131,6 +130,7 @@ function isUserRegistered($course_id)
     $query = "select count(*) from reg_course where $course_id=course_id and {$personid['id']}=person_id;";
     $results = mysqli_query($db, $query);
     $noOfCourseEntries = mysqli_fetch_array($results);
+    error_log(print_r($query, TRUE));
     error_log(print_r($results, TRUE));
     if ($noOfCourseEntries[0] == 0) {
         return false;

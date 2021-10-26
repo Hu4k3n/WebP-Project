@@ -14,12 +14,12 @@
 <body>
     <nav>
         <i class="fa fa-angle-left" style="font-size: 50px; cursor: pointer"
-            onclick="window.location.href = '../pages/courses.html';"></i>
+            onclick="window.location.href = '../pages/courses.php';"></i>
         <div class="row center">
             <a href="../index.php">Home</a>
             <a style="cursor: pointer" onclick="window.scrollTo(0, document.body.scrollHeight)">About</a>
-            <a class="active" href="../pages/courses.html">Courses</a>
-            <a href="../pages/teachers.html">Mentors</a>
+            <a class="active" href="../pages/courses.php">Courses</a>
+            <a href="../pages/teachers.php">Mentors</a>
             <a style="cursor: pointer" onclick="window.scrollTo(0, document.body.scrollHeight)">Contact</a>
         </div>
     </nav>
