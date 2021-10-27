@@ -21,7 +21,11 @@
         <h1>Our Courses</h1>
         <!-- First Row -->
         <div class="row center" style="flex-grow: 0;">
+            <?php if(isset($_SESSION['username'])):?>
             <div class="card" onclick="window.location.href = '../courses/htmlCourse.php';">
+            <?php else:?>
+            <div class="card">
+            <?php endif;?>
                 <div class="card-image">
                     <img src="../images/html.jpg" alt="">
                 </div>
@@ -46,7 +50,11 @@
                 </div>
 
             </div>
+            <?php if(isset($_SESSION['username'])):?>
             <div class="card" onclick="window.location.href = '../courses/cssCourse.php';">
+            <?php else:?>
+            <div class="card">
+            <?php endif;?>
                 <div class="card-image">
                     <img src="../images/css.jpg" alt="">
                 </div>
@@ -70,7 +78,12 @@
                     </div>
                 </div>
             </div>
+
+            <?php if(isset($_SESSION['username'])):?>
             <div class="card" onclick="window.location.href = '../courses/jsCourse.php';">
+            <?php else:?>
+            <div class="card">
+            <?php endif;?>
                 <div class="card-image">
                     <img src="../images/js.jpg" alt="" style="object-fit: 26em;object-position: -6.75em;">
                 </div>
@@ -97,7 +110,11 @@
             </div>
 
             <!-- Second Row -->
+            <?php if(isset($_SESSION['username'])):?>
             <div class="card" onclick="window.location.href = '../courses/javaCourse.php';">
+            <?php else:?>
+            <div class="card">
+            <?php endif;?>
                 <div class="card-image">
                     <img src="../images/java.png" alt="">
                 </div>
@@ -121,7 +138,11 @@
                     </div>
                 </div>
             </div>
+            <?php if(isset($_SESSION['username'])):?>
             <div class="card" onclick="window.location.href = '../courses/ajaxCourse.php';">
+            <?php else:?>
+            <div class="card">
+            <?php endif;?>
                 <div class="card-image">
                     <img src="../images/ajax.webp" alt="">
                 </div>
@@ -145,7 +166,12 @@
                     </div>
                 </div>
             </div>
+
+            <?php if(isset($_SESSION['username'])):?>
             <div class="card" onclick="window.location.href = '../courses/pythonCourse.php';">
+            <?php else:?>
+            <div class="card">
+            <?php endif;?>
                 <div class="card-image">
                     <img src="../images/python.png" alt="">
                 </div>
