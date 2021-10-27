@@ -65,6 +65,18 @@ To build an e-learning website with the given specifications. The course page sh
 -   Footer
     ![](resources/footer-ss.png)
 
+-   Course Register Button
+    ![](resources/register-course-ss.png)
+
+-   Course View for a Registered course
+    ![](resources/registered-course-ss.png)
+
+-   Search Results
+    ![](resources/search-ss.png)
+
+-   Registered users list
+    ![](resources/user-list-ss.png)
+
 ## Contributors
 
 Anish Sharma - [@aneeshsharma](https://github.com/aneeshsharma) - B181065CS
@@ -73,8 +85,8 @@ Arjun Syam - [@hu4k3n](https://github.com/Hu4k3n) - B180031CS
 
 Dev Sony - [@HotMonkeyWings](https://github.com/HotMonkeyWings) - B180297CS
 
-
 <!-- MARKDOWN LINKS & IMAGES -->
+
 [contributors-shield]: https://img.shields.io/badge/Conitrbutors-3-brightgreen
 [contributors-url]: https://github.com/Hu4k3n/WebP-Project/graphs/contributors
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
