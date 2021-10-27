@@ -1,3 +1,4 @@
+<?php include('../php/auth.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,12 +13,12 @@
 
 <body>
     <nav>
-        <i class="fa fa-angle-left" style="font-size: 50px; cursor: pointer" onclick="window.location.href = '../pages/courses.html';"></i>
+        <i class="fa fa-angle-left" style="font-size: 50px; cursor: pointer" onclick="window.location.href = '../pages/courses.php';"></i>
         <div class="row center">
             <a href="../index.php">Home</a>
             <a style="cursor: pointer" onclick="window.scrollTo(0, document.body.scrollHeight)">About</a>
-            <a class="active" href="../pages/courses.html">Courses</a>
-            <a href="../pages/teachers.html">Mentors</a>
+            <a class="active" href="../pages/courses.php">Courses</a>
+            <a href="../pages/teachers.php">Mentors</a>
             <a style="cursor: pointer" onclick="window.scrollTo(0, document.body.scrollHeight)">Contact</a>
         </div>
     </nav>
@@ -34,38 +35,67 @@
             </p>
         </div>
     </div>
+    <?php
+    if (!isUserRegistered(5)) {
+        echo '
+        <div class="course">
+        <div class="row center">
+            <form action="ajaxCourse.php" method="post">
+                <input type="hidden" name="course_id" value="5">
+                <button type="submit" name="register_course" class="signup-btn">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+        ';
+    } else {
+        echo '
+        <div class="course">
+            <div class="module">
+                <hr class="section" />
+                <h1>References</h1>
+                <hr class="moduleHeading" />
+                <br />
+                <div class="moduleContents">
+                    <input type="checkbox" id="reference1" name="reference1
+                        value=" books">
+                    <label for="references1"> <a href="https://www.academiepro.com/uploads/livres/AjaxProgramming.pdf" target="_blank">Ajax Programming for Absolute Beginners <i class="fa fa-external-link"></i></a></label><br />
+                    <input type="checkbox" id="reference1" name="reference1
+                        value=" books">
+                    <label for="references1"><a href="https://inspirit.net.in/books/html,%20css%20and%20javascript/AJAX%20-%20The%20Complete%20Reference.pdf" target="_blank">Ajax: The Complete Reference <i class="fa fa-external-link"></i></a></label><br />
+                    <input type="checkbox" id="reference1" name="reference1
+                        value=" books">
+                    <label for="references1"> <a href="https://doc.lagout.org/programmation/Ajax/Ajax%20For%20Dummies%20%282006%29.pdf" target="_blank">Ajax For Dummies <i class="fa fa-external-link"></i></a></label><br /><br />
+                </div>
+            </div>
+            <div class="row center">
+                <label>Filter: </label>
+                <select id="filter">
+                    <option value="all">None</option>
+                    <option value="short">Short</option>
+                    <option value="medium">Medium</option>
+                    <option value="long">Long</option>
+                </select>
+            </div>
+            <div id="course"></div>
+        </div>
+        <script type="text/javascript" src="../js/ajaxCourse.js"></script>
+        <script type="text/javascript" src="../js/rendercourse.js"></script>
 
-    <div class="course">
-        <div class="module">
-            <hr class="section" />
-            <h1>References</h1>
-            <hr class="moduleHeading" />
-            <br />
-            <div class="moduleContents">
-                <input type="checkbox" id="reference1" name="reference1
-                    value=" books">
-                <label for="references1"> <a href="https://www.academiepro.com/uploads/livres/AjaxProgramming.pdf" target="_blank">Ajax Programming for Absolute Beginners <i class="fa fa-external-link"></i></a></label><br />
-                <input type="checkbox" id="reference1" name="reference1
-                    value=" books">
-                <label for="references1"><a href="https://inspirit.net.in/books/html,%20css%20and%20javascript/AJAX%20-%20The%20Complete%20Reference.pdf" target="_blank">Ajax: The Complete Reference <i class="fa fa-external-link"></i></a></label><br />
-                <input type="checkbox" id="reference1" name="reference1
-                    value=" books">
-                <label for="references1"> <a href="https://doc.lagout.org/programmation/Ajax/Ajax%20For%20Dummies%20%282006%29.pdf" target="_blank">Ajax For Dummies <i class="fa fa-external-link"></i></a></label><br /><br />
+        <div class="course">
+            <div class="row center">
+                <form action="" method="post">
+                    <input type="hidden" name="course_id" value="5">
+                    <button type="submit" name="completed_course" class="signup-btn">
+                        Completed
+                    </button>
+                </form>
             </div>
         </div>
-        <div class="row center">
-            <label>Filter: </label>
-            <select id="filter">
-                <option value="all">None</option>
-                <option value="short">Short</option>
-                <option value="medium">Medium</option>
-                <option value="long">Long</option>
-            </select>
-        </div>
-        <div id="course"></div>
-    </div>
-    <script type="text/javascript" src="../js/ajaxCourse.js"></script>
-    <script type="text/javascript" src="../js/rendercourse.js"></script>
+        ';
+    }
+    ?>
     <footer>
         <div class="container">
             <div class="sec aboutus">

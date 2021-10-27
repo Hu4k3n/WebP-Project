@@ -26,7 +26,6 @@
                     <?php 
                         $user_list_query = "SELECT * FROM users";
                         $result = mysqli_query($db, $user_list_query);
-                        $users = mysqli_fetch_array($result);
 
                         while($row = mysqli_fetch_array($result))
                         {

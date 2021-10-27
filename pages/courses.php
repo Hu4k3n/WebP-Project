@@ -1,3 +1,4 @@
+<?php include('../php/auth.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/courses.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <script type="text/javascript" src="/js/modal.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Courses</title>
 </head>
@@ -18,7 +21,7 @@
         <h1>Our Courses</h1>
         <!-- First Row -->
         <div class="row center" style="flex-grow: 0;">
-            <div class="card" onclick="window.location.href = '../courses/htmlCourse.html';">
+            <div class="card" onclick="window.location.href = '../courses/htmlCourse.php';">
                 <div class="card-image">
                     <img src="../images/html.jpg" alt="">
                 </div>
@@ -32,13 +35,18 @@
                         <div class="type">Hour</div>
                     </div>
                     <div class="stat">
-                        <div class="value">12</div>
-                        <div class="type">Modules</div>
+                        <?php
+                        $noOfUsers=countOfRegisteredUsers(1);
+                        echo "
+                        <div class='value'>$noOfUsers</div>
+                        <div class='type'>number of registraions</div>
+                        ";
+                        ?>
                     </div>
                 </div>
 
             </div>
-            <div class="card" onclick="window.location.href = '../courses/cssCourse.html';">
+            <div class="card" onclick="window.location.href = '../courses/cssCourse.php';">
                 <div class="card-image">
                     <img src="../images/css.jpg" alt="">
                 </div>
@@ -52,12 +60,17 @@
                         <div class="type">Hours</div>
                     </div>
                     <div class="stat">
-                        <div class="value">9</div>
-                        <div class="type">Modules</div>
+                    <?php
+                        $noOfUsers=countOfRegisteredUsers(2);
+                        echo "
+                        <div class='value'>$noOfUsers</div>
+                        <div class='type'>number of registraions</div>
+                        ";
+                        ?>
                     </div>
                 </div>
             </div>
-            <div class="card" onclick="window.location.href = '../courses/jsCourse.html';">
+            <div class="card" onclick="window.location.href = '../courses/jsCourse.php';">
                 <div class="card-image">
                     <img src="../images/js.jpg" alt="" style="object-fit: 26em;object-position: -6.75em;">
                 </div>
@@ -71,15 +84,20 @@
                         <div class="type">Hours</div>
                     </div>
                     <div class="stat">
-                        <div class="value">21</div>
-                        <div class="type">Modules</div>
+                    <?php
+                        $noOfUsers=countOfRegisteredUsers(3);
+                        echo "
+                        <div class='value'>$noOfUsers</div>
+                        <div class='type'>number of registraions</div>
+                        ";
+                        ?>
                     </div>
                 </div>
 
             </div>
 
             <!-- Second Row -->
-            <div class="card" onclick="window.location.href = '../courses/javaCourse.html';">
+            <div class="card" onclick="window.location.href = '../courses/javaCourse.php';">
                 <div class="card-image">
                     <img src="../images/java.png" alt="">
                 </div>
@@ -93,12 +111,17 @@
                         <div class="type">Hours</div>
                     </div>
                     <div class="stat">
-                        <div class="value">18</div>
-                        <div class="type">Modules</div>
+                    <?php
+                        $noOfUsers=countOfRegisteredUsers(4);
+                        echo "
+                        <div class='value'>$noOfUsers</div>
+                        <div class='type'>number of registraions</div>
+                        ";
+                        ?>
                     </div>
                 </div>
             </div>
-            <div class="card" onclick="window.location.href = '../courses/ajaxCourse.html';">
+            <div class="card" onclick="window.location.href = '../courses/ajaxCourse.php';">
                 <div class="card-image">
                     <img src="../images/ajax.webp" alt="">
                 </div>
@@ -112,12 +135,17 @@
                         <div class="type">Hours</div>
                     </div>
                     <div class="stat">
-                        <div class="value">7</div>
-                        <div class="type">Modules</div>
+                    <?php
+                        $noOfUsers=countOfRegisteredUsers(5);
+                        echo "
+                        <div class='value'>$noOfUsers</div>
+                        <div class='type'>number of registraions</div>
+                        ";
+                        ?>
                     </div>
                 </div>
             </div>
-            <div class="card" onclick="window.location.href = '../courses/pythonCourse.html';">
+            <div class="card" onclick="window.location.href = '../courses/pythonCourse.php';">
                 <div class="card-image">
                     <img src="../images/python.png" alt="">
                 </div>
@@ -131,8 +159,13 @@
                         <div class="type">Hours</div>
                     </div>
                     <div class="stat">
-                        <div class="value">23</div>
-                        <div class="type">Modules</div>
+                    <?php
+                        $noOfUsers=countOfRegisteredUsers(6);
+                        echo "
+                        <div class='value'>$noOfUsers</div>
+                        <div class='type'>number of registraions</div>
+                        ";
+                        ?>
                     </div>
                 </div>
             </div>
