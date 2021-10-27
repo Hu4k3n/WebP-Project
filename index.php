@@ -30,7 +30,7 @@
             <?php
             if(!isset($_SESSION['username'])):?>
             <div class="row">
-                <button onclick="window.location.href = 'php/login.php';">
+                <button onclick="window.location.href = '/php/login.php';">
                     Login
                 </button>
                 <button class="signup-btn" onclick="window.location.href = '/php/signup.php';">
