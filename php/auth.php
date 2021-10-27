@@ -124,13 +124,14 @@ if (isset($_POST['completed_course'])) {
 // to check whether a user is in session before registering
 function isUserRegistered($course_id)
 {
-    $username = mysqli_real_escape_string($db, $_SESSION['username']);
+    $conn = mysqli_connect('localhost', 'monkeywings', '3p1cburg3r', 'eLearningDB');
+    $username = mysqli_real_escape_string($conn, $_SESSION['username']);
     $query = "select id from users where '$username'=username;";
-    $results = mysqli_query($db, $query);
+    $results = mysqli_query($conn, $query);
     error_log(print_r($results, TRUE));
     $personid = mysqli_fetch_array($results);
     $query = "select count(*) from reg_course where $course_id=course_id and {$personid['id']}=person_id;";
-    $results = mysqli_query($db, $query);
+    $results = mysqli_query($conn, $query);
     $noOfCourseEntries = mysqli_fetch_array($results);
     error_log(print_r($query, TRUE));
     error_log(print_r($results, TRUE));
@@ -142,8 +143,9 @@ function isUserRegistered($course_id)
 }
 // to count the number of user registrations in the courses.php
 function countOfRegisteredUsers($course_id){
+    $conn = mysqli_connect('localhost', 'monkeywings', '3p1cburg3r', 'eLearningDB');
     $query = "select count(*) from reg_course where $course_id=course_id;";
-    $results = mysqli_query($db, $query);
+    $results = mysqli_query($conn, $query);
     $noOfUsers = mysqli_fetch_array($results);
     return $noOfUsers[0];
 }

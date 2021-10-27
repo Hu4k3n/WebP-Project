@@ -14,7 +14,7 @@
     <?php include('nav.php') ?>
     <div class="search-section">
         <form method="get" action="search.php">
-            <input name="term" placholder="Enter keywords" />
+            <input name="term" placeholder="Enter keywords" />
             <button type="submit">Search</button>
         </form>
 <?php 
@@ -26,7 +26,7 @@
     $search_terms_escaped = [];
 
     foreach ($search_terms as $term) {
-        array_push($search_terms_escaped, mysqli_real_escape_string($db, $term));
+        array_push($search_terms_escaped, mysqli_real_escape_string($db, strtolower($term)));
     }
 
     $query = "SELECT page, title FROM search_index WHERE ";
@@ -42,7 +42,7 @@
     $count = mysqli_num_rows($result);
 
     if ($count > 0) {
-        echo "<p>$count results found</p>";
+        echo "<p>$count results found for \"" . $_GET['term'] . "\"</p>";
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<div class='card' onclick=\"window.location = '" . $row['page'] . "'\"><a href='#'>" . $row['title'] . "</a><br />https://webcoursera.com/" . $row['page'] . "</div>";
         }
