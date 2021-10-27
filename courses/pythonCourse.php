@@ -1,3 +1,4 @@
+<?php include('../php/auth.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,17 +8,17 @@
     <link rel="stylesheet" href="../css/coursePage.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <title>HTML-CoursePage</title>
+    <title>Python-CoursePage</title>
 </head>
 
 <body>
     <nav>
-        <i class="fa fa-angle-left" style="font-size: 50px; cursor: pointer" onclick="window.location.href = '../pages/courses.html';"></i>
+        <i class="fa fa-angle-left" style="font-size: 50px; cursor: pointer" onclick="window.location.href = '../pages/courses.php';"></i>
         <div class="row center">
             <a href="../index.php">Home</a>
             <a style="cursor: pointer" onclick="window.scrollTo(0, document.body.scrollHeight)">About</a>
-            <a class="active" href="../pages/courses.html">Courses</a>
-            <a href="../pages/teachers.html">Mentors</a>
+            <a class="active" href="../pages/courses.php">Courses</a>
+            <a href="../pages/teachers.php">Mentors</a>
             <a style="cursor: pointer" onclick="window.scrollTo(0, document.body.scrollHeight)">Contact</a>
         </div>
     </nav>
@@ -25,17 +26,31 @@
         <div class="htmllanding">
             <div class="flex-container">
                 <div>
-                    <h1>HTML</h1>
+                    <h1>Python</h1>
                 </div>
             </div>
             <p>
-                HTML stands for Hyper Text Markup Language. It is the most
-                basic building block of the Web. It is used to create the
-                structure of a Web page.
+                Python is a widely used high-level, general-purpose,
+                interpreted, dynamic programming language.
             </p>
         </div>
     </div>
-
+    <?php
+    if (!isUserRegistered(6)) {
+        echo '
+        <div class="course">
+        <div class="row center">
+            <form action="" method="post">
+                <input type="hidden" name="course_id" value="6">
+                <button type="submit" name="register_course" class="signup-btn">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+        ';
+    } else {
+        echo '
     <div class="course">
         <div class="module">
             <hr class="section" />
@@ -45,13 +60,10 @@
             <div class="moduleContents">
                 <input type="checkbox" id="reference1" name="reference1
                     value=" books">
-                <label for="references1"><a href="https://www.dashskilledutrain.com/assets/Books/Html%20CSS%20The%20Complete%20Reference.pdf" target="_blank">HTML & CSS: The Complete Reference, Fifth Edition <i class="fa fa-external-link"></i></a></label><br />
+                <label for="references1"> <a href="https://static.realpython.com/python-basics-sample-chapters.pdf" target="_blank"> Python Basics: A Practical Introduction <i class="fa fa-external-link"></i></a></label><br />
                 <input type="checkbox" id="reference1" name="reference1
                     value=" books">
-                <label for="references1"><a href="https://www.tutorialspoint.com/html/html_tutorial.pdf" target="_blank">HTML Tutorial <i class="fa fa-external-link"></i></a></label><br />
-                <input type="checkbox" id="reference1" name="reference1
-                    value=" books">
-                <label for="references1"> <a href="https://d0wnl0ads.files.wordpress.com/2011/08/wiley-html-4-for-dummies.pdf" target="_blank">HTML 4 for Dummies <i class="fa fa-external-link"></i></a></label><br /><br />
+                <label for="references1"> <a href="http://www.sfu.ca/~eep2/Technology/Learning%20Python%205th%20Ed%202013.pdf" target="_blank">Learning Python <i class="fa fa-external-link"></i></a></label><br /><br />
             </div>
         </div>
         <div class="row center">
@@ -65,8 +77,22 @@
         </div>
         <div id="course"></div>
     </div>
-    <script type="text/javascript" src="../js/htmlCourse.js"></script>
+    <script type="text/javascript" src="../js/pythonCourse.js"></script>
     <script type="text/javascript" src="../js/rendercourse.js"></script>
+
+        <div class="course">
+        <div class="row center">
+            <form action="" method="post">
+                <input type="hidden" name="course_id" value="6">
+                <button type="submit" name="completed_course" class="signup-btn">
+                    Completed
+                </button>
+            </form>
+        </div>
+    </div>
+    ';
+    }
+    ?>
     <footer>
         <div class="container">
             <div class="sec aboutus">

@@ -1,69 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/coursePage.css" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <title>Python-CoursePage</title>
-</head>
-
-<body>
-    <nav>
-        <i class="fa fa-angle-left" style="font-size: 50px; cursor: pointer" onclick="window.location.href = '../pages/courses.html';"></i>
-        <div class="row center">
-            <a href="../index.php">Home</a>
-            <a style="cursor: pointer" onclick="window.scrollTo(0, document.body.scrollHeight)">About</a>
-            <a class="active" href="../pages/courses.html">Courses</a>
-            <a href="../pages/teachers.html">Mentors</a>
-            <a style="cursor: pointer" onclick="window.scrollTo(0, document.body.scrollHeight)">Contact</a>
-        </div>
-    </nav>
-    <div class="htmlbg">
-        <div class="htmllanding">
-            <div class="flex-container">
-                <div>
-                    <h1>Python</h1>
-                </div>
-            </div>
-            <p>
-                Python is a widely used high-level, general-purpose,
-                interpreted, dynamic programming language.
-            </p>
-        </div>
-    </div>
-
-    <div class="course">
-        <div class="module">
-            <hr class="section" />
-            <h1>References</h1>
-            <hr class="moduleHeading" />
-            <br />
-            <div class="moduleContents">
-                <input type="checkbox" id="reference1" name="reference1
-                    value=" books">
-                <label for="references1"> <a href="https://static.realpython.com/python-basics-sample-chapters.pdf" target="_blank"> Python Basics: A Practical Introduction <i class="fa fa-external-link"></i></a></label><br />
-                <input type="checkbox" id="reference1" name="reference1
-                    value=" books">
-                <label for="references1"> <a href="http://www.sfu.ca/~eep2/Technology/Learning%20Python%205th%20Ed%202013.pdf" target="_blank">Learning Python <i class="fa fa-external-link"></i></a></label><br /><br />
-            </div>
-        </div>
-        <div class="row center">
-            <label>Filter: </label>
-            <select id="filter">
-                <option value="all">None</option>
-                <option value="short">Short</option>
-                <option value="medium">Medium</option>
-                <option value="long">Long</option>
-            </select>
-        </div>
-        <div id="course"></div>
-    </div>
-    <script type="text/javascript" src="../js/pythonCourse.js"></script>
-    <script type="text/javascript" src="../js/rendercourse.js"></script>
-    <footer>
+<footer>
         <div class="container">
             <div class="sec aboutus">
                 <h2>About Us</h2>
@@ -128,6 +63,3 @@
     <div class="copyright">
         <p>Copyright &copy; 2021 Webcoursera. All Rights Reserved.</p>
     </div>
-</body>
-
-</html>

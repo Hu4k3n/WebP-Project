@@ -29,6 +29,7 @@
     animation: fade-in 1s;
     font-weight: 900;
 }
+
 .htmllanding p {
     position: relative;
     font-size: 25px;
@@ -47,14 +48,17 @@ hr.section {
     border: 10px solid #777;
     border-radius: 0px;
 }
+
 hr.moduleHeading {
     border: 2px solid #777;
     border-radius: 0px;
 }
+
 hr.moduleDivision {
     border: 1px solid crimson;
     border-radius: 0px;
 }
+
 .module {
     /* margin-left: 200px;
     margin-right: 200px; */
@@ -63,6 +67,7 @@ hr.moduleDivision {
     animation: fade-in 1s;
     font-weight: 500;
 }
+
 .module h1 {
     position: relative;
     font-size: 50px;
@@ -72,12 +77,14 @@ hr.moduleDivision {
     font-weight: 700;
     /* margin-left: 200px; */
 }
+
 .moduleContents {
     /* margin-left: 200px; */
     animation: fade-in 1s;
     font-weight: 700;
     font-size: 25px;
 }
+
 .moduleContents input {
     width: 30px;
     height: 30px;
@@ -135,6 +142,7 @@ hr.moduleDivision {
 .course h1 {
     color: white;
 }
+
 .course col {
     display: flex;
     flex-direction: column;
@@ -153,4 +161,18 @@ hr.moduleDivision {
     border: 1px solid black;
     padding: 10px 30px;
     font-size: 20px;
+}
+
+.signup-btn {
+    position: relative;
+    cursor: pointer;
+    font-size: 36px;
+    padding: 10px 20px;
+    border: 2px solid #0f0f3f;
+    margin: 20px 10px;
+    border-radius: 0;
+    background: white;
+    color: #0f0f3f;
+    transition-duration: 0.2s;
+    animation: fade-in 1s;
 }
