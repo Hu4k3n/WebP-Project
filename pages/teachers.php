@@ -1,3 +1,4 @@
+<?php include('../php/auth.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/courses.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <script type="text/javascript" src="/js/modal.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Mentors</title>
 </head>
@@ -18,7 +21,7 @@
         <h1>Our Mentors</h1>
         <!-- First Row -->
         <div class="row center" style="flex-grow: 0;">
-            <div class="card" onclick="window.location.href = '../index.php';">
+            <div class="card">
                 <div class="card-image">
                     <img src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortWaved&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=GraphicShirt&clotheColor=Black&graphicType=Pizza&eyeType=Happy&eyebrowType=UpDown&mouthType=Smile&skinColor=Light" alt="" style="object-fit: contain;">
                 </div>
@@ -39,7 +42,7 @@
                 </div>
 
             </div>
-            <div class="card" onclick="window.location.href = '../index.php';">
+            <div class="card">
                 <div class="card-image">
                     <img src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription01&hairColor=Black&facialHairType=MoustacheMagnum&facialHairColor=Black&clotheType=ShirtCrewNeck&clotheColor=PastelRed&eyeType=Wink&eyebrowType=Default&mouthType=Twinkle&skinColor=Light" alt="" style="object-fit: contain;">
                 </div>
@@ -61,7 +64,7 @@
                 </div>
 
             </div>
-            <div class="card" onclick="window.location.href = '../index.php';">
+            <div class="card">
                 <div class="card-image">
                     <img src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairFrizzle&accessoriesType=Prescription01&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=PastelBlue&eyeType=Default&eyebrowType=Default&mouthType=Smile&skinColor=Light" alt="" style="object-fit: contain;">
                 </div>
